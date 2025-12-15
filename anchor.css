@@ -3,6 +3,7 @@ body {
     padding: 0;
     background-color: #c0c0c0a3;
     font-size: 0.8rem;
+    overflow-x: hidden;
 }
 .container {
     width: 450px;
@@ -63,4 +64,39 @@ body {
     left: 5px;
     font-size: 30px;
     color: orangered;
+}
+.code_here {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    transform: translateX(115px);
+}
+
+@keyframes slidout {
+    from {
+        transform: translateX(200px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+.showhere {
+    transform: translateX(0);
+    animation: slidout 1s ease-in-out alternate;
+}
+.code_here a {
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+    width: 250px;
+    border-radius: 5px;
+    text-align: center;
+}
+.code_sign {
+    cursor: pointer;
+}
+@media (min-width: 385px) and (max-width: 289) {
+    .code_here {
+        transform: translateX(200px);
+    }
 }
